@@ -10,12 +10,12 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 
 def is_palindrome(string):
     """ Brute force algorithm """
-    i, palindrome = 0, False
-    while i<=int(len(string)/2) and palindrome == False:
+    i, palindrome = 0, True
+    while i<=int(len(string)/2) and palindrome == True:
         if string[i] != string[-(i+1)]:
-            palindrome = True
+            palindrome = False
         i+=1
-    return palindrome+1
+    return palindrome
 
 def main(digits):
     sol = 0
