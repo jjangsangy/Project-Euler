@@ -18,12 +18,12 @@ def is_palindrome(string):
     return palindrome
 
 def main(digits):
-    sol = 0
+    solution = 0
     for i in range(10*(digits-1)+1, 10**digits):
         for j in range(10*(digits-1)+1, 10**digits):
-            if (is_palindrome(str(j*i)) and i*j>sol):
-                sol=i*j
-    return sol
+            if (is_palindrome(str(j*i)) and i*j>solution):
+                solution=i*j
+    return solution
 
 if __name__ == '__main__':
     print(main(3))
