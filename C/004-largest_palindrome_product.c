@@ -16,6 +16,7 @@
 int is_palindrome(char* string) {
     int i, palindrome = 1;
 
+    // Compare left vs right side
     for (i=0; i<=(int)(strlen(string))/2; i++)
         if (string[i] != string[(int)(strlen(string))-i-1])
             palindrome = 0;
@@ -28,6 +29,7 @@ int main(void)
     char c[8];
     int i, j, solution=0;
 
+    // Brute force algorithm
     for (i=100; i<=1000; i++)
         for (j=100; j<=1000; j++) {
             itoa(i*j, c);
@@ -36,6 +38,7 @@ int main(void)
     }
 
     printf("Solution is %i\n", solution);
+
     return 0;
 }
 
