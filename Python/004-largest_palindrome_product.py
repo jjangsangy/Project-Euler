@@ -19,8 +19,8 @@ def is_palindrome(string):
 
 def main(digits):
     sol = 0
-    for i in range(10^(digits-1)+1, 10**digits):
-        for j in range(10^(digits-1)+1, 10**digits):
+    for i in range(10*(digits-1)+1, 10**digits):
+        for j in range(10*(digits-1)+1, 10**digits):
             if (is_palindrome(str(j*i)) and i*j>sol):
                 sol=i*j
     return sol
