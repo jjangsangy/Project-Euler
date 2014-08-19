@@ -14,3 +14,6 @@ long long fibonacci(int n) {
             sqrt(5.0));
 }
 
+long long fac(unsigned long int n) {
+    return lround(exp(lgamma(n+1)));
+}
