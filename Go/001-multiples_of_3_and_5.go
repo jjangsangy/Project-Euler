@@ -10,5 +10,5 @@ func main() {
 		}
 	}
 
-	fmt.Printf("Sum of all the multiples of 3 or 5 below 1000 = %d\n", sum)
+	fmt.Printf("sum is %d\n", sum)
 }
