@@ -9,15 +9,13 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 """
 
 def is_palindrome(string):
-    """ Brute force algorithm """
-    i, palindrome = 0, True
-    while i<=len(string)/2 and palindrome == True:
-        if string[i] != string[-(i+1)]:
-            palindrome = False
-        i+=1
-    return palindrome
+    if string[::-1] == string:
+        return True
+    else:
+        return False
 
 def main(digits):
+    """ Brute force algorithm"""
     solution = 0
     for i in range(10*(digits-1)+1, 10**digits):
         for j in range(10*(digits-1)+1, 10**digits):
@@ -26,4 +24,4 @@ def main(digits):
     return solution
 
 if __name__ == '__main__':
-    print(main(3))
+    print(main(4))
