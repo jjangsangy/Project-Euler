@@ -24,4 +24,4 @@ def main(digits):
     return solution
 
 if __name__ == '__main__':
-    print(main(4))
+    print(main(3))
