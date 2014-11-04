@@ -1,5 +1,7 @@
 /**
-  * Segmented Prime Sieve
+  * Segmented Prime Sieve Algorithm
+  * 
+  * Author: Sang Han 2014
   *
   **/
 
