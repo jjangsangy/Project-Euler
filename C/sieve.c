@@ -2,9 +2,11 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-long *sieve(int limit)
+long *sieve(long limit)
 {
-    long long i, j;
+    long i, j;
+
+    // Allocate Enough Long Integers
     long *primes = malloc(limit * sizeof(long));
 
     // Fill Array
@@ -34,11 +36,12 @@ int main(int argc, char *argv[])
     int i, max = atoi(argv[1]);
     long *primes = sieve(max);
 
-    // Print Out Primes
+    // Print Out Prime Numbers
+    // Primality Check to Exhaustion (Optional)
     for (i=3; i<max; i++)
         if (primes[i] == 1)
-            printf("Prime: %i Check: %s\n", i,
-                is_prime(i) ? "True": "False"
+            printf("%s Prime: %i\n",
+                is_prime(i) ? "True": "False", i
             );
 
     free(primes);
