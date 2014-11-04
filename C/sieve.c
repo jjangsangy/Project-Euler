@@ -1,50 +1,62 @@
+/**
+  * The Sieve of Eratosthenes
+  *
+  * Sang Han
+  *
+  * Complexity:
+  *     Space:  Worst: O(n)             Best: O(n/log(n))
+  *      Time:  Worst: O(n*log(log(n))  Best: O(n*log(log(n))
+  *
+  **/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <math.h>
 
 long *sieve(long limit)
 {
-    long i, j;
+  /* Sieve Algorithm */
 
-    // Allocate Enough Long Integers
-    long *primes = malloc(limit * sizeof(long));
+  // Prime Number Theroem to Estimate Array Size
+  long count = (long)(floor(1.2*(limit/ log(limit))));
 
-    // Fill Array
-    for (i=2; i<limit; i++)
-        primes[i] = 1;
+  long *table  = malloc(limit * sizeof(long));
+  long *primes = malloc(count * sizeof(long));
 
-    // Sieve Away
-    for (i=2; i<limit; i++)
-        if (primes[i])
-            for (j=i; i*j<limit; j++)
-                primes[i*j] = 0;
+  // Main Algorithm
+  long i, j;
+  for (i=2; i<limit; i++) table[i] = 1;
+  for (i=2; i<limit; i++) if (table[i])
+      for (j=i; i*j<limit; j++)
+        table[i*j] = 0;
 
-    return primes;
-}
+  // Memory Deallocation
+  for (i=2,j=0; i<limit; i++) if (table[i] == 1)
+      primes[j++] = i;
+  free(table);
 
-int is_prime(int n)
-{
-    int i;
-    for (i=2; i<n; i--)
-        if (n % i == 1)
-            return true;
-    return false;
+  return primes;
 }
 
 int main(int argc, char *argv[])
 {
-    int i, max = atoi(argv[1]);
+    // Get Input
+    if (argc-1 != 1)
+    {
+        fprintf(stderr, "Error %s Requres 1 Argument\n", __FILE__);
+        return EXIT_FAILURE;
+    }
+
+    // Run Sieve
+    long i = 0, max = atol(argv[1]);
     long *primes = sieve(max);
 
-    // Print Out Prime Numbers
-    // Primality Check to Exhaustion (Optional)
-    for (i=3; i<max; i++)
-        if (primes[i] == 1)
-            printf("%s Prime: %i\n",
-                is_prime(i) ? "True": "False", i
-            );
+    // Print Primes
+    while (primes[i])
+      printf("%ld\n", primes[i++]);
 
     free(primes);
 
-    return 0;
+    return EXIT_SUCCESS;
 }
