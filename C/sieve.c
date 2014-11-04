@@ -18,7 +18,7 @@ long *sieve(long limit)
   /* Sieve Algorithm */
 
   // Prime Number Theroem to Estimate Array Size
-  long count = (long)(floor(1.2*(limit/ log(limit))));
+  long count = (long)(floor(1.2*(limit/log(limit))));
 
   long *table  = malloc(limit * sizeof(long));
   long *primes = malloc(count * sizeof(long));
