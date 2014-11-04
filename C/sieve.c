@@ -4,7 +4,7 @@
   * Sang Han
   *
   * Complexity:
-  *     Space:  Worst: O(n)             Best: O(n/log(n))
+  *     Space:  Worst: O(n^2/log(n))    Best: O(n/log(n))
   *      Time:  Worst: O(n*log(log(n))  Best: O(n*log(log(n))
   *
   **/
