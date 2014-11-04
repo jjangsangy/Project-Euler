@@ -1,9 +1,14 @@
 /**
   * Segmented Prime Sieve Algorithm
-  * 
-  * Author: Sang Han 2014
+  *
+  * Author: Sang Han
   *
   **/
+
+struct Range {
+    int start;
+    int end;
+};
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -80,16 +85,18 @@ int main(int argc, char *argv[])
         return EXIT_FAILURE;
     }
 
-    long start = strtoul(argv[1], NULL, 10);
-    long end  =  strtoul(argv[2], NULL, 10);
+    struct Range range = {
+        strtoul(argv[1], NULL, 10),
+        strtoul(argv[2], NULL, 10),
+    };
 
     // Run
-    long *primes = seg_sieve(start, end);
+    long *primes = seg_sieve(range.start, range.end);
 
     // Print Primes
     long i;
-    for (i=0; i<end-start+1; i++) if (primes[i])
-        printf("%ld\n", i+start);
+    for (i=0; i<range.end-range.start+1; i++) if (primes[i])
+        printf("%ld\n", i+range.start);
 
     free(primes);
 
