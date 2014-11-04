@@ -7,8 +7,6 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define SEGMENT_SIZE 4096
-
 long *prime_sieve(long n)
 {
   /**
