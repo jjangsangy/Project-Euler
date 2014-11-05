@@ -11,9 +11,11 @@
 #include <math.h>
 #include <assert.h>
 
+#define free_index(t) free_table((void**)&(t))
+
 // Used to Generate Bounds to Compute
 // Frequency of Primes Distributions
-static const float legendre_ratio;
+const float legendre_ratio;
 
 struct Range {
     long start;

@@ -17,9 +17,6 @@
 
 #include "seg_sieve.h"
 
-#define free_index(t) free_table((void**)&(t))
-
-
 void free_table(void **table)
 {
     if (table != NULL && *table != NULL) {
@@ -31,12 +28,12 @@ void free_table(void **table)
 void allocate_table(long **table, long size, long value)
 {
     // Make a table like a boss at IKEA
-    *table = (long)malloc(size * sizeof(long));
+    **table = (long)malloc(size * sizeof(long));
 
     if (*table != NULL) {
         for (long i=0; i<size; i++)
         {
-            *(table+i) = value
+            **(table+i) = value;
         }
     }
 }
@@ -47,7 +44,7 @@ long *prime_sieve(long n)
     long n_root = (long)(ceill(sqrtl(n)));
     long john_silver = (long)(ceill(legendre_ratio * (n_root/log(n_root))));
 
-    long *table  = NULL
+    long *table  = NULL;
     long *primes = NULL;
 
     allocate_table(&table, n_root, 1);
@@ -122,7 +119,6 @@ int main(int argc, char *argv[])
         strtoul(argv[2], NULL, 10),
     };
 
-    // Run Sieve
     long *primes = seg_sieve(range.start, range.end);
 
     // Print Out For Rage
