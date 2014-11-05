@@ -2,6 +2,7 @@
   * Segmented Prime Sieve Header
   *
   * Author: Sang Han
+  *   Year: 2014
   *
   **/
 
@@ -19,8 +20,12 @@ struct Range {
     long end;
 };
 
+// Couldn't sell on Craigslist
+void free_table(void **table);
+
+void allocate_table(long **table, long size, long value);
+
 long *seg_sieve(long start, long end);
 
 long *prime_sieve(long n);
 
-void free_table(void **table);

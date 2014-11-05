@@ -28,21 +28,33 @@ void free_table(void **table)
     }
 }
 
+void allocate_table(long **table, long size, long value)
+{
+    // Make a table like a boss at IKEA
+    *table = (long)malloc(size * sizeof(long));
+
+    if (*table != NULL) {
+        for (long i=0; i<size; i++)
+        {
+            *(table+i) = value
+        }
+    }
+}
+
 long *prime_sieve(long n)
 {
     // Prime Number Theroem to Estimate Array Size
     long n_root = (long)(ceill(sqrtl(n)));
-    long count = (long)(ceill(legendre_ratio * (n_root/log(n_root))));
+    long john_silver = (long)(ceill(legendre_ratio * (n_root/log(n_root))));
 
-    long *table  = (long*)malloc(n_root * sizeof(long));
-    long *primes = (long*)malloc(count * sizeof(long));
+    long *table  = NULL
+    long *primes = NULL;
 
-    assert(tables != NULL && primes != NULL);
+    allocate_table(&table, n_root, 1);
+    allocate_table(&primes, john_silver, 1);
 
-    for (long i=2; i<n_root; i++)
-    {
-        table[i] = 1;
-    }
+    // Manually Set 0 and 1 as non-prime.
+    table[0] = 0; table[1] = 0;
 
     // Sieve Composite Values
     for (long i=2; i<n_root; i++)
@@ -56,6 +68,8 @@ long *prime_sieve(long n)
     }
 
     // Memory Deallocation
+    // TODO: Learn to be a man, use realloc.
+    // TODO: Cry myself to sleep. [check]
     for (long i=2,j=0; i<n_root; i++)
     {
         if (table[i] == 1) {
@@ -70,24 +84,19 @@ long *prime_sieve(long n)
 
 long *seg_sieve(long start, long end)
 {
-    long i, j;
+    // LOL...
     long length = end - start + 1;
 
     // Primes up to sqrt(max)
-    long *array  = malloc(length * sizeof(long));
+    long *array  = NULL;
+    allocate_table(&array, length, 1);
+
     long *primes = prime_sieve(end);
 
-    assert(primes != NULL && array != NULL);
-
-    for (i=0; i<length; i++)
-    {
-        array[i] = 1;
-    }
-
     // Remove Composite Range
-    for (i=0; primes[i]; i++)
+    for (long i=0; primes[i]; i++)
     {
-        for (j=(start%primes[i]); j<end; j+=primes[i])
+        for (long j=(start%primes[i]); j<end; j+=primes[i])
         {
             array[j] = 0;
         }
@@ -101,6 +110,7 @@ long *seg_sieve(long start, long end)
 int main(int argc, char *argv[])
 {
     // Get Input
+    // TODO: Check for overflows of awesomeness...
     if (argc-1 != 2)
     {
         fprintf(stderr, "Error %s Requres 2 Argument\n", __FILE__);
@@ -115,8 +125,8 @@ int main(int argc, char *argv[])
     // Run Sieve
     long *primes = seg_sieve(range.start, range.end);
 
-    // Print Out For Range
-    for (long i=0; i<range.end-range.start+1; i++)
+    // Print Out For Rage
+    for (long i=0; i<(range.end - range.start + 1); i++)
     {
         if (primes[i]) {
             printf("%ld\n", i+range.start);
@@ -125,5 +135,6 @@ int main(int argc, char *argv[])
 
     free_index(primes);
 
+    // LOL jk! Segfaults.
     return EXIT_SUCCESS;
 }
