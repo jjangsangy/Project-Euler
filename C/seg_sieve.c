@@ -47,7 +47,7 @@ long *prime_sieve(long n)
     long n_root = (long)(ceill(sqrtl(n)));
     long john_silver = (long)(ceill(legendre_ratio * (n_root/log(n_root))));
 
-    long *table  = NULL
+    long *table  = NULL;
     long *primes = NULL;
 
     allocate_table(&table, n_root, 1);
