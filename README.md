@@ -16,7 +16,7 @@ Code master that no one ever was.
 1. Keep track of how you learn certain types of things best.
 2. Apply that knowledge to this problem domain
 3. When possible build off of something you do know well.
-4. Involve others who do "get it." Learn from them. Choose competent yet patient people.
+4. __Involve others who do "get it." Learn from them. Choose competent yet patient people.__
 5. Stick with it. This is not an easy subject to master.
 
 ![algorithms.gif](./img/algorithms.gif)
