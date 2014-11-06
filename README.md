@@ -13,8 +13,6 @@ Personal repository for Project Euler solutions implemented in various languages
 The sole existence of this repository is for personal motivation to become the greatest
 Code master that no one ever was.
 
-### Ways To get Better
-
 1. Keep track of how you learn certain types of things best.
 2. Apply that knowledge to this problem domain
 3. When possible build off of something you do know well.
@@ -23,21 +21,25 @@ Code master that no one ever was.
 
 ![algorithms.gif](./img/algorithms.gif)
 
-## How to Learn
-
-### Attention To Details
-Pay a lot of attention to code , spec and design.
+## How to Learn and Get Better
 
 ### Questioning:
-Question everything , existing and new. Try to know why.
+Question everything, do this till the end of your life.
+If something is happening that you don't understand, ask why. Then ask why that is. Then go away and research alternatives, and propose them. Ask questions until you could explain in complete detail.
 
 ### Incremental Development
-Build stuff incrementally . Try to get something running end to end first with either proxies or mock code and then I fill in the details.
+Build stuff incrementally .
+Try to get something running end to end first with either proxies or mock code and then I fill in the details.
 
 ### Read code
-Read code . A lot inside and outside.
-Reading code is the path that unlocks other skills.
+Read code.
+A lot inside and outside. Reading code is the path that unlocks other skills.
 
+### Enjoy the Process
+Playing is when you are focused on the process, rather than the goal.
+When you are playing, it is ok to make mistakes. It is ok to change the rules.
+When you are playing, you are constantly learning.
+In fact, I would conjecture, that real learning (not memorization) can only happen while playing.
 
 # Gotta, Code them All!
 
