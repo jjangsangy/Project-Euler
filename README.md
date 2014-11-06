@@ -1,24 +1,48 @@
 Project Euler
 ==============
 
+Personal repository for Project Euler solutions implemented in various languages.
+
 | Name:    | Email:               | Year: | License:                 |
 |----------|----------------------|-------|--------------------------|
 | Sang Han | jjangsangy@gmail.com | 2014  | [Apache License Version   2](https://github.com/jjangsangy/Project-Euler/blob/master/LICENSE) |
 
-![algorithms.gif](./img/algorithms.gif)
 
-# Gotta, Code them All!
-![pokemon.jpg](./img/pokemon.jpg)
-
-### Personal repository for Project Euler solutions implemented in various languages.
-
-The Journey of become a better Programmer
-> “I have no special talents. I am only passionately curious.”
-
-> — Albert Einstein (1952)
+# The Journey of become a better Programmer
 
 The sole existence of this repository is for personal motivation to become the greatest
 Code master that no one ever was.
+
+### Ways To get Better
+
+1. Keep track of how you learn certain types of things best.
+2. Apply that knowledge to this problem domain
+3. When possible build off of something you do know well.
+4. Involve others who do "get it." Learn from them. Choose competent yet patient people.
+5. Stick with it. This is not an easy subject to master.
+
+![algorithms.gif](./img/algorithms.gif)
+
+## How to Learn
+
+### Attention To Details
+Pay a lot of attention to code , spec and design.
+
+### Questioning:
+Question everything , existing and new. Try to know why.
+
+### Incremental Development
+Build stuff incrementally . Try to get something running end to end first with either proxies or mock code and then I fill in the details.
+
+### Read code
+Read code . A lot inside and outside.
+Reading code is the path that unlocks other skills.
+
+
+# Gotta, Code them All!
+
+![pokemon.jpg](./img/pokemon.jpg)
+
 
 # Data Structures & Algorithms
 
@@ -29,7 +53,16 @@ in multiple languages that I've kept. I can't ever claim to own a tree sort like
 much like a Pokemon Master doesn't actually own their Pokemon. For the sake of training
 I don't copy-paste code as little as possible.
 
-# Learn to Become a Master
+The key to a solid foundation in data structures and algorithms is not an exhaustive survey of every conceivable data structure and its subforms, with memorization of each's Big-O value and amortized cost. Such knowledge is great and impressive if you've got it, but you will rarely need it. For better or worse, your career will likely never require you to implement a red-black tree node removal algorithm. But you ought be able—with complete ease!—to identify when a binary search tree is a useful solution to a problem, because you will often need that skill.
+
+
+> Thinking outside the box only works if you know everything inside it.
+
+# Learn to be A Master
+
+> Everyone thinks of changing the world, but no one thinks of changing himself
+>
+> Leo Tolstoy (1828-1910)
 
 ![pokemon_master.png](./img/pokemon_master.png)
 
