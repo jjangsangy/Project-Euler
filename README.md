@@ -1,11 +1,11 @@
 Project Euler
 ==============
 
-![algorithms.gif](./img/algorithms.gif)
-
 | Name:    | Email:               | Year: | License:                 |
 |----------|----------------------|-------|--------------------------|
-| Sang Han | jjangsangy@gmail.com | 2014  | [Apache License Version 2](https://github.com/jjangsangy/Project-Euler/blob/master/LICENSE) |
+| Sang Han | jjangsangy@gmail.com | 2014  | [Apache License Version   2](https://github.com/jjangsangy/Project-Euler/blob/master/LICENSE) |
+
+![algorithms.gif](./img/algorithms.gif)
 
 # Gotta, Code them All!
 ![pokemon.jpg](./img/pokemon.jpg)
