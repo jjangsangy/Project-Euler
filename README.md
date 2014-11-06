@@ -1,7 +1,12 @@
 Project Euler
 ==============
+| Name:    | Email:               | Year: | License:                 |
+|----------|----------------------|-------|--------------------------|
+| Sang Han | jjangsangy@gmail.com | 2014  | Apache License Version 2 |
 
-Personal repository for Project Euler solutions in various languages.
+--------
+
+Personal repository for Project Euler solutions implemented in various languages.
 
 ![algorithms.gif](./img/algorithms.gif)
 
@@ -18,6 +23,7 @@ in multiple languages that I've kept. I can't ever claim to own a tree sort like
 much like a Pokemon Master doesn't actually own their Pokemon. For the sake of training
 I don't copy-paste code as little as possible.
 
-# Code
+# Become a Master
+
+### Satirical Rendition
 ![master.gif](./img/master.gif)
-<small>Satire</small>
