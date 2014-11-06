@@ -21,12 +21,15 @@ The sole existence of this repository is for personal motivation to become the g
 Code master that no one ever was.
 
 # Data Structures & Algorithms
+
 ![master.gif](./img/master.gif)
+
 This repository is also a repository housing the useful data structures and algorithms implemented
 in multiple languages that I've kept. I can't ever claim to own a tree sort like BFS
 much like a Pokemon Master doesn't actually own their Pokemon. For the sake of training
 I don't copy-paste code as little as possible.
 
 # Learn to Become a Master
+
 ![pokemon_master.png](./img/pokemon_master.png)
 
