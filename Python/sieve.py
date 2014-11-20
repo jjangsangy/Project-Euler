@@ -40,3 +40,15 @@ def np_sieve(n):
         if primes[i]:
             primes[i*i::i] = False
     return np.nonzero(primes)[0][2:]
+
+
+surprise = lambda  very_math:     map(
+           lambda __lololol_:  filter(
+           (None),          (     map(
+           lambda __suchwoow:     map(
+           lambda __because___yolo__:\
+         __lololol_.__setitem__(   ( (
+         __because___yolo__ )  ),  (0)
+         ),range(2 *   (__suchwoow), ( (very_math)),__suchwoow)
+         ),range(2 ,    very_math )  ),(__lololol_))[1]  )[1:],
+         [ range(       very_math )  ]                   )[0]
