@@ -32,4 +32,4 @@ range(2,very_math)),                    (__lololol_))[1])[1:],[range(very_math)]
 if __name__ == '__main__':
     primes = Lambda()
 
-    print(primes(1000))
+    print(reduce(lambda x,y: x+2 == y, (primes(1000), primes(1000))))

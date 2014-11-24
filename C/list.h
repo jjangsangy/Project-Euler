@@ -14,6 +14,8 @@
   *
   **/
 
+#ifndef LIST_H
+#define LIST_H
 
 // Structures
 typedef struct _node {
@@ -29,11 +31,9 @@ typedef struct _list {
 
 // Function Prototypes
 void initialize_list(List *list);
-
 void add_head(List);
-
 void add_tail(List *list, void *data);
-
 void delete(List *list, Node *node);
-
 Node *get_node(List *list);
+
+#endif
